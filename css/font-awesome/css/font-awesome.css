@@ -11,6 +11,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 .fa {
   display: inline-block;
   font-family: FontAwesome;
@@ -1336,3 +1337,4 @@
 .fa-plus-square-o:before {
   content: "\f196";
 }
+

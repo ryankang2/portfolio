@@ -714,6 +714,16 @@ properly.
    .first { clear: none; }
    .s-first { clear: left; }
 
+   .skill-container{
+        margin-right: 8vw;
+        margin-bottom: 4vh;
+    }
+
+    #skills-tools{
+        line-height: 4vh;
+    }
+
+
 }
 
 /* mobile wide/smaller tablets
@@ -730,9 +740,20 @@ properly.
 	   float: none;
 	   margin-left: 0;
 	   margin-right: 0;
-      padding: 0 30px;
+       padding: 0 30px;
    }
-   .row .row { width: auto; max-width: none; margin: 0 -30px; }
+   .row .row { 
+       width: auto;
+       max-width: none; 
+       margin: 0 -30px; 
+    }
+
+   .skill-container{
+        margin-right: 6vw;
+        margin-left: 8vw;
+        margin-bottom: 4vh;
+    }
+
 
    [class*="column"] + [class*="column"]:last-child { float: none; }
    [class*="bgrid"] [class*="column"] + [class*="column"]:last-child { float: none; }
@@ -751,21 +772,81 @@ properly.
    .row .offset-11   { margin-left: 0%; }
 }
 
+/* larger screens
+--------------------------------------------------------------- */
+
+@media screen and (max-width: 2000px) {
+ 
+    .wide .row { max-width: 1180px; }
+    .skill-container{
+         margin-right: 5vw;
+         margin-bottom: 4vh;
+     }
+ 
+     .skill-container>i{
+         font-size: 10rem;
+     }
+ }
+
+@media screen and (max-width: 1650px) {
+
+    .wide .row { max-width: 1180px; }
+    .skill-container{
+         margin-right: 7vw;
+         margin-bottom: 4vh;
+     }
+ 
+     .skill-container>i{
+         font-size: 9rem;
+     }
+ }
+ 
+
+
+ /* ipad */
+ @media only screen and (max-width: 1024px) {
+    .row { width: auto; }
+    .skill-container{
+        margin-right: 8vw;
+        margin-bottom: 4vh;
+     }
+     .skill-container>i{
+         font-size: 10rem;
+     }
+ }
+
 /* mobile narrow
 --------------------------------------------------------------- */
 @media only screen and (max-width: 460px) {
 
    .row { width: auto; }
-
+   .skill-container{
+        margin-right: 12vw;
+        margin-left: 8vw;
+        margin-bottom: 6vh;
+    }
+    .skill-container>i{
+        font-size: 8rem;
+    }
 }
 
-/* larger screens
---------------------------------------------------------------- */
-@media screen and (min-width: 1200px) {
+/* iphone5 */
+@media only screen and (max-width: 360px) {
+    .row { width: auto; }
+    .skill-container{
+        margin-right: 16vw;
+        margin-left: 5vw;
+        margin-bottom: 6vh;
+     }
+     .skill-container>i{
+         font-size: 6rem;
+     }
 
-   .wide .row { max-width: 1180px; }
+ }
 
-}
+
+
+
 
 /* ------------------------------------------------------------------ */
 /* e. Others
