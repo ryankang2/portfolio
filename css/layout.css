@@ -212,8 +212,8 @@ ul#nav li.current a { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 180px;
+   height: 245px;
    border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -233,6 +233,10 @@ ul#nav li.current a { color: #F06000; }
 #about .download .button i {
    margin-right: 15px;
    font-size: 20px;
+}
+
+#about p span{
+  font-weight: bold;
 }
 
 
