@@ -375,6 +375,10 @@ ul#nav li.current a { color: #F06000; }
    cursor: pointer;
 }
 
+#steadyeats{
+  width: 104%;
+}
+
 /* overlay */
 .portfolio-item .item-wrap .overlay {
    position: absolute;
