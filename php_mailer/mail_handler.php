@@ -1,9 +1,12 @@
 <?php
+echo "asdadas";
 require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 foreach($_POST as $key=>$value){
     $_POST[$key] = htmlentities(addslashes($value));
 }
+
+print_r($_POST);
 
 $message = [];
 $output = [
@@ -12,28 +15,28 @@ $output = [
 ];
 
 //sanitize name field
-$message['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+$message['name'] = filter_var($_POST['contactName'], FILTER_SANITIZE_STRING);
 if(empty($message['name'])){
     $output['success'] = false;
     $output['messages'][] = 'missing name key';
 }
 
 //validate email field
-$message['email'] = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+$message['email'] = filter_var($_POST['contactEmail'], FILTER_VALIDATE_EMAIL);
 if(empty($message['email'])){
     $output['success']= false;
     $output['messages'][] = 'invalid email key';
 }
 
 //sanitize message
-$message['message'] = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+$message['message'] = filter_var($_POST['contactMessage'], FILTER_SANITIZE_STRING);
 if(empty($message['message'])){
     $output['success'] = false;
     $output['messages'][] = 'missing message key';
 }
 
 //sanitize subject
-$message['subject'] = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+$message['subject'] = filter_var($_POST['contactSubject'], FILTER_SANITIZE_STRING);
 if(empty($message['subject'])){
     $output['success'] = false;
     $output['messages'][] = 'missing subject key';
